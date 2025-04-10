@@ -76,9 +76,21 @@ WSGI_APPLICATION = 'sample.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'local': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ourlife',
+        'USER': 'root',
+        'PASSWORD': 'Vari3112##',
+        'HOST': 'svc.sel4.cloudtype.app',
+        'PORT': '30806',
+        'OPTIONS': {
+            'options': '-c search_path=bible'
+        },
+
     }
 }
 
