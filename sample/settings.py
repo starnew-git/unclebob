@@ -88,7 +88,8 @@ DATABASES = {
         'HOST': 'svc.sel4.cloudtype.app',
         'PORT': '30806',
         'OPTIONS': {
-            'options': '-c search_path=bible'
+            'options': '-c search_path=bible',
+            'client_encoding': 'utf8',
         },
 
     }
